@@ -1,16 +1,25 @@
-# Routing Strategy with Amazon Route 53
 
-Amazon Route 53 is used as a strategic routing layer.
+# Amazon Route 53 in the Data Platform
 
-## Responsibilities
+Amazon Route 53 is used as a strategic routing layer,
+not just as a DNS service.
 
-- Provide a stable ingestion domain
-- Route traffic based on health and latency
-- Enable canary releases for pipeline changes
-- Support failover strategies
+## Core Responsibilities
+
+- Provide a stable ingestion endpoint
+- Decouple producers from backend infrastructure
+- Support traffic-based routing decisions
+
+## Ingestion Domain
+
+events.ecommerce-domain.com
+
+
+Producers publish events to this domain and are unaware
+of backend services, clusters, or regions.
 
 ## Why DNS-Level Routing
 
-- Producers remain decoupled from infrastructure
-- Backend services can evolve independently
-- Routing changes do not require client updates
+- No client redeployment required
+- Routing changes are transparent to producers
+- Infrastructure can evolve independently
