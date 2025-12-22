@@ -65,24 +65,8 @@ to enforce contracts between producers and consumers.
 
 ## Repository Structure
 
-├── architecture/
-│ └── diagrams/
-├── schemas/
-│ ├── page_view_event.json
-│ ├── cart_event.json
-│ └── purchase_event.json
-├── kafka/
-│ ├── producers/
-│ ├── consumers/
-│ └── topics/
-├── processing/
-│ ├── stream-processing/
-│ └── aggregations/
-├── monitoring/
-│ └── grafana/
-├── infrastructure/
-│ └── routing/
-└── README.md
+<img width="793" height="625" alt="Captura desde 2025-12-22 08-08-43" src="https://github.com/user-attachments/assets/6199c6c1-7036-48ef-a560-108ca0fa062a" />
+
 
 ---
 
