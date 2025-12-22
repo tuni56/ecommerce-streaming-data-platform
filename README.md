@@ -65,26 +65,25 @@ to enforce contracts between producers and consumers.
 
 ## Repository Structure
 
-📊 Real-time Analytics Pipeline
 ├── architecture/
-│   └── diagrams/           # 🏗️ System design
-├── schemas/                # 📋 Event schemas (JSON Schema)
-│   ├── page_view_event.json
-│   ├── cart_event.json
-│   └── purchase_event.json
-├── kafka/                  # 🐛 Streaming layer
-│   ├── producers/          # Event producers
-│   ├── consumers/          # Stream processors  
-│   └── topics/             # Event topics
-├── processing/             # 🔄 Data pipelines
-│   ├── stream-processing/  # Kafka Streams/Flink
-│   └── aggregations/       # Materialized views
-├── monitoring/             # 📈 Observability
-│   └── grafana/            # Dashboards & alerts
-├── infrastructure/         # ☁️ IaC
-│   └── routing/            # API Gateway/Load Balancer
+│ └── diagrams/
+├── schemas/
+│ ├── page_view_event.json
+│ ├── cart_event.json
+│ └── purchase_event.json
+├── kafka/
+│ ├── producers/
+│ ├── consumers/
+│ └── topics/
+├── processing/
+│ ├── stream-processing/
+│ └── aggregations/
+├── monitoring/
+│ └── grafana/
+├── infrastructure/
+│ └── routing/
 └── README.md
-undefined
+
 ---
 
 ## Kafka Design
