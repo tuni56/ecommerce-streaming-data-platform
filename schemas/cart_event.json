@@ -1,0 +1,9 @@
+{
+  "event_type": "cart_event",
+  "event_id": "uuid",
+  "user_id": "string",
+  "product_id": "string",
+  "action": "add|remove",
+  "quantity": "integer",
+  "timestamp": "iso-8601"
+}
