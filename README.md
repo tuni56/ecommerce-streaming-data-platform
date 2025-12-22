@@ -95,19 +95,6 @@ but to inform routing and scaling decisions.
 
 ---
 
-## What This Project Demonstrates
-
-This project is intentionally **not production-deployed**.
-
-Its purpose is to demonstrate:
-- data engineering thinking
-- architectural trade-offs
-- event-driven design
-- Kafka fundamentals
-- routing and resilience strategies
-
----
-
 ## Future Enhancements
 
 - Traffic simulation for load testing
