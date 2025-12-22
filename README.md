@@ -84,6 +84,7 @@ to enforce contracts between producers and consumers.
 ├── infrastructure/         # ☁️ IaC
 │   └── routing/            # API Gateway/Load Balancer
 └── README.md
+undefined
 ---
 
 ## Kafka Design
