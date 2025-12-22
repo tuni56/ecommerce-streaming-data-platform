@@ -41,6 +41,7 @@ Amazon Route 53 is used as a strategic routing layer to:
 - support failover and traffic spikes
 
 Behind this entry point, Kafka handles durable ingestion and streaming.
+<img width="1536" height="1024" alt="real-time_ecommerce_pipeline" src="https://github.com/user-attachments/assets/50df57e7-7446-4e81-886e-09f858a5469d" />
 
 ---
 
