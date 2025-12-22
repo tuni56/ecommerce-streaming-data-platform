@@ -1,3 +1,5 @@
+[![Kafka](https://img.shields.io/badge/Kafka-StreamingPipeline-orange?style=flat&logo=apachekafka)](https://kafka.apache.org/)
+[![Grafana](https://img.shields.io/badge/Grafana-Monitoring-blue?style=flat&logo=grafana)](https://grafana.com/)
 # Real-Time Ecommerce Streaming Data Platform
 
 This repository documents the design and implementation of a real-time
@@ -63,26 +65,25 @@ to enforce contracts between producers and consumers.
 
 ## Repository Structure
 
-.
+📊 Real-time Analytics Pipeline
 ├── architecture/
-│ └── diagrams/
-├── schemas/
-│ ├── page_view_event.json
-│ ├── cart_event.json
-│ └── purchase_event.json
-├── kafka/
-│ ├── producers/
-│ ├── consumers/
-│ └── topics/
-├── processing/
-│ ├── stream-processing/
-│ └── aggregations/
-├── monitoring/
-│ └── grafana/
-├── infrastructure/
-│ └── routing/
+│   └── diagrams/           # 🏗️ System design
+├── schemas/                # 📋 Event schemas (JSON Schema)
+│   ├── page_view_event.json
+│   ├── cart_event.json
+│   └── purchase_event.json
+├── kafka/                  # 🐛 Streaming layer
+│   ├── producers/          # Event producers
+│   ├── consumers/          # Stream processors  
+│   └── topics/             # Event topics
+├── processing/             # 🔄 Data pipelines
+│   ├── stream-processing/  # Kafka Streams/Flink
+│   └── aggregations/       # Materialized views
+├── monitoring/             # 📈 Observability
+│   └── grafana/            # Dashboards & alerts
+├── infrastructure/         # ☁️ IaC
+│   └── routing/            # API Gateway/Load Balancer
 └── README.md
-
 ---
 
 ## Kafka Design
