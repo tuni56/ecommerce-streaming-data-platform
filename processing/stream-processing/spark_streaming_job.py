@@ -5,10 +5,20 @@ from pyspark.sql.types import StructType, StringType, DoubleType, IntegerType
 BOOTSTRAP_SERVERS = "10.34.23.19:9092"
 TOPICS = "page_views,cart_events,purchase_events"
 
+JARS_DIR = "/opt/spark-jars"
+JARS = ",".join([
+    f"{JARS_DIR}/spark-sql-kafka-0-10_2.13-4.1.0.jar",
+    f"{JARS_DIR}/kafka-clients-3.8.0.jar",
+    f"{JARS_DIR}/spark-token-provider-kafka-0-10_2.13-4.1.0.jar",
+    f"{JARS_DIR}/commons-pool2-2.12.0.jar",
+])
+
 spark = (
     SparkSession.builder
     .appName("EcommerceStreamingJob")
-    .config("spark.jars.packages", "org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.0")
+    .config("spark.jars", JARS)
+    .config("spark.driver.extraClassPath", JARS)
+    .config("spark.executor.extraClassPath", JARS)
     .config("spark.sql.shuffle.partitions", "2")
     .getOrCreate()
 )
@@ -61,6 +71,7 @@ query = (
     .outputMode("update")
     .format("console")
     .option("truncate", False)
+    .option("checkpointLocation", "/tmp/spark-checkpoint")
     .trigger(processingTime="5 seconds")
     .start()
 )
